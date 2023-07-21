@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		785121A32A6B10A400B8FACF /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785121A22A6B10A400B8FACF /* SessionView.swift */; };
+		785121A52A6B10D900B8FACF /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785121A42A6B10D900B8FACF /* StudyView.swift */; };
+		785121A72A6B10F600B8FACF /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785121A62A6B10F600B8FACF /* TaskListView.swift */; };
+		785121A92A6B10FF00B8FACF /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785121A82A6B10FF00B8FACF /* TimerView.swift */; };
+		785121AB2A6B12D600B8FACF /* EndSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785121AA2A6B12D600B8FACF /* EndSessionView.swift */; };
+		7894799E2A69BA3A00D22A06 /* StudyPomodoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894799D2A69BA3A00D22A06 /* StudyPomodoroApp.swift */; };
+		789479A02A69BA3A00D22A06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7894799F2A69BA3A00D22A06 /* ContentView.swift */; };
+		789479A22A69BA3B00D22A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 789479A12A69BA3B00D22A06 /* Assets.xcassets */; };
+		789479A52A69BA3B00D22A06 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 789479A42A69BA3B00D22A06 /* Preview Assets.xcassets */; };
+		789479AF2A69BA3C00D22A06 /* StudyPomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789479AE2A69BA3C00D22A06 /* StudyPomodoroTests.swift */; };
+		789479B92A69BA3C00D22A06 /* StudyPomodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789479B82A69BA3C00D22A06 /* StudyPomodoroUITests.swift */; };
+		789479BB2A69BA3C00D22A06 /* StudyPomodoroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789479BA2A69BA3C00D22A06 /* StudyPomodoroUITestsLaunchTests.swift */; };
+		789479CA2A69BB8100D22A06 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789479C92A69BB8100D22A06 /* HomeView.swift */; };
+		789479CC2A69D03900D22A06 /* StudyScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789479CB2A69D03900D22A06 /* StudyScreenView.swift */; };
+		789479CE2A69D1F000D22A06 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789479CD2A69D1F000D22A06 /* UserModel.swift */; };
+		789479D02A6AF3F500D22A06 /* StudyScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789479CF2A6AF3F500D22A06 /* StudyScreenModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		789479AB2A69BA3C00D22A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 789479922A69BA3A00D22A06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 789479992A69BA3A00D22A06;
+			remoteInfo = StudyPomodoro;
+		};
+		789479B52A69BA3C00D22A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 789479922A69BA3A00D22A06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 789479992A69BA3A00D22A06;
+			remoteInfo = StudyPomodoro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		785121A22A6B10A400B8FACF /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		785121A42A6B10D900B8FACF /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
+		785121A62A6B10F600B8FACF /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		785121A82A6B10FF00B8FACF /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		785121AA2A6B12D600B8FACF /* EndSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndSessionView.swift; sourceTree = "<group>"; };
+		7894799A2A69BA3A00D22A06 /* StudyPomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyPomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7894799D2A69BA3A00D22A06 /* StudyPomodoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPomodoroApp.swift; sourceTree = "<group>"; };
+		7894799F2A69BA3A00D22A06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		789479A12A69BA3B00D22A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		789479A42A69BA3B00D22A06 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		789479AA2A69BA3C00D22A06 /* StudyPomodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyPomodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		789479AE2A69BA3C00D22A06 /* StudyPomodoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPomodoroTests.swift; sourceTree = "<group>"; };
+		789479B42A69BA3C00D22A06 /* StudyPomodoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyPomodoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		789479B82A69BA3C00D22A06 /* StudyPomodoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPomodoroUITests.swift; sourceTree = "<group>"; };
+		789479BA2A69BA3C00D22A06 /* StudyPomodoroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPomodoroUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		789479C92A69BB8100D22A06 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		789479CB2A69D03900D22A06 /* StudyScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyScreenView.swift; sourceTree = "<group>"; };
+		789479CD2A69D1F000D22A06 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		789479CF2A6AF3F500D22A06 /* StudyScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyScreenModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		789479972A69BA3A00D22A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789479A72A69BA3C00D22A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789479B12A69BA3C00D22A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		785121AC2A6B12DC00B8FACF /* StudyViews */ = {
+			isa = PBXGroup;
+			children = (
+				789479CB2A69D03900D22A06 /* StudyScreenView.swift */,
+				785121AA2A6B12D600B8FACF /* EndSessionView.swift */,
+				785121A22A6B10A400B8FACF /* SessionView.swift */,
+				785121A42A6B10D900B8FACF /* StudyView.swift */,
+				785121A62A6B10F600B8FACF /* TaskListView.swift */,
+				785121A82A6B10FF00B8FACF /* TimerView.swift */,
+			);
+			path = StudyViews;
+			sourceTree = "<group>";
+		};
+		789479912A69BA3A00D22A06 = {
+			isa = PBXGroup;
+			children = (
+				7894799C2A69BA3A00D22A06 /* StudyPomodoro */,
+				789479AD2A69BA3C00D22A06 /* StudyPomodoroTests */,
+				789479B72A69BA3C00D22A06 /* StudyPomodoroUITests */,
+				7894799B2A69BA3A00D22A06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7894799B2A69BA3A00D22A06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7894799A2A69BA3A00D22A06 /* StudyPomodoro.app */,
+				789479AA2A69BA3C00D22A06 /* StudyPomodoroTests.xctest */,
+				789479B42A69BA3C00D22A06 /* StudyPomodoroUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7894799C2A69BA3A00D22A06 /* StudyPomodoro */ = {
+			isa = PBXGroup;
+			children = (
+				7894799D2A69BA3A00D22A06 /* StudyPomodoroApp.swift */,
+				789479C82A69BA6100D22A06 /* Models */,
+				789479C72A69BA5200D22A06 /* Views */,
+				789479A12A69BA3B00D22A06 /* Assets.xcassets */,
+				789479A32A69BA3B00D22A06 /* Preview Content */,
+			);
+			path = StudyPomodoro;
+			sourceTree = "<group>";
+		};
+		789479A32A69BA3B00D22A06 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				789479A42A69BA3B00D22A06 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		789479AD2A69BA3C00D22A06 /* StudyPomodoroTests */ = {
+			isa = PBXGroup;
+			children = (
+				789479AE2A69BA3C00D22A06 /* StudyPomodoroTests.swift */,
+			);
+			path = StudyPomodoroTests;
+			sourceTree = "<group>";
+		};
+		789479B72A69BA3C00D22A06 /* StudyPomodoroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				789479B82A69BA3C00D22A06 /* StudyPomodoroUITests.swift */,
+				789479BA2A69BA3C00D22A06 /* StudyPomodoroUITestsLaunchTests.swift */,
+			);
+			path = StudyPomodoroUITests;
+			sourceTree = "<group>";
+		};
+		789479C72A69BA5200D22A06 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				785121AC2A6B12DC00B8FACF /* StudyViews */,
+				7894799F2A69BA3A00D22A06 /* ContentView.swift */,
+				789479C92A69BB8100D22A06 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		789479C82A69BA6100D22A06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				789479CD2A69D1F000D22A06 /* UserModel.swift */,
+				789479CF2A6AF3F500D22A06 /* StudyScreenModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		789479992A69BA3A00D22A06 /* StudyPomodoro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 789479BE2A69BA3C00D22A06 /* Build configuration list for PBXNativeTarget "StudyPomodoro" */;
+			buildPhases = (
+				789479962A69BA3A00D22A06 /* Sources */,
+				789479972A69BA3A00D22A06 /* Frameworks */,
+				789479982A69BA3A00D22A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudyPomodoro;
+			productName = StudyPomodoro;
+			productReference = 7894799A2A69BA3A00D22A06 /* StudyPomodoro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		789479A92A69BA3C00D22A06 /* StudyPomodoroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 789479C12A69BA3C00D22A06 /* Build configuration list for PBXNativeTarget "StudyPomodoroTests" */;
+			buildPhases = (
+				789479A62A69BA3C00D22A06 /* Sources */,
+				789479A72A69BA3C00D22A06 /* Frameworks */,
+				789479A82A69BA3C00D22A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				789479AC2A69BA3C00D22A06 /* PBXTargetDependency */,
+			);
+			name = StudyPomodoroTests;
+			productName = StudyPomodoroTests;
+			productReference = 789479AA2A69BA3C00D22A06 /* StudyPomodoroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		789479B32A69BA3C00D22A06 /* StudyPomodoroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 789479C42A69BA3C00D22A06 /* Build configuration list for PBXNativeTarget "StudyPomodoroUITests" */;
+			buildPhases = (
+				789479B02A69BA3C00D22A06 /* Sources */,
+				789479B12A69BA3C00D22A06 /* Frameworks */,
+				789479B22A69BA3C00D22A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				789479B62A69BA3C00D22A06 /* PBXTargetDependency */,
+			);
+			name = StudyPomodoroUITests;
+			productName = StudyPomodoroUITests;
+			productReference = 789479B42A69BA3C00D22A06 /* StudyPomodoroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		789479922A69BA3A00D22A06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					789479992A69BA3A00D22A06 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					789479A92A69BA3C00D22A06 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 789479992A69BA3A00D22A06;
+					};
+					789479B32A69BA3C00D22A06 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 789479992A69BA3A00D22A06;
+					};
+				};
+			};
+			buildConfigurationList = 789479952A69BA3A00D22A06 /* Build configuration list for PBXProject "StudyPomodoro" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 789479912A69BA3A00D22A06;
+			productRefGroup = 7894799B2A69BA3A00D22A06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				789479992A69BA3A00D22A06 /* StudyPomodoro */,
+				789479A92A69BA3C00D22A06 /* StudyPomodoroTests */,
+				789479B32A69BA3C00D22A06 /* StudyPomodoroUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		789479982A69BA3A00D22A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				789479A52A69BA3B00D22A06 /* Preview Assets.xcassets in Resources */,
+				789479A22A69BA3B00D22A06 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789479A82A69BA3C00D22A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789479B22A69BA3C00D22A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		789479962A69BA3A00D22A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785121A92A6B10FF00B8FACF /* TimerView.swift in Sources */,
+				785121A32A6B10A400B8FACF /* SessionView.swift in Sources */,
+				789479CC2A69D03900D22A06 /* StudyScreenView.swift in Sources */,
+				785121A72A6B10F600B8FACF /* TaskListView.swift in Sources */,
+				789479D02A6AF3F500D22A06 /* StudyScreenModel.swift in Sources */,
+				785121AB2A6B12D600B8FACF /* EndSessionView.swift in Sources */,
+				789479CA2A69BB8100D22A06 /* HomeView.swift in Sources */,
+				789479A02A69BA3A00D22A06 /* ContentView.swift in Sources */,
+				789479CE2A69D1F000D22A06 /* UserModel.swift in Sources */,
+				785121A52A6B10D900B8FACF /* StudyView.swift in Sources */,
+				7894799E2A69BA3A00D22A06 /* StudyPomodoroApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789479A62A69BA3C00D22A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				789479AF2A69BA3C00D22A06 /* StudyPomodoroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789479B02A69BA3C00D22A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				789479B92A69BA3C00D22A06 /* StudyPomodoroUITests.swift in Sources */,
+				789479BB2A69BA3C00D22A06 /* StudyPomodoroUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		789479AC2A69BA3C00D22A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 789479992A69BA3A00D22A06 /* StudyPomodoro */;
+			targetProxy = 789479AB2A69BA3C00D22A06 /* PBXContainerItemProxy */;
+		};
+		789479B62A69BA3C00D22A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 789479992A69BA3A00D22A06 /* StudyPomodoro */;
+			targetProxy = 789479B52A69BA3C00D22A06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		789479BC2A69BA3C00D22A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		789479BD2A69BA3C00D22A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		789479BF2A69BA3C00D22A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StudyPomodoro/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slaney.evan.StudyPomodoro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		789479C02A69BA3C00D22A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StudyPomodoro/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slaney.evan.StudyPomodoro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		789479C22A69BA3C00D22A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slaney.evan.StudyPomodoroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyPomodoro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StudyPomodoro";
+			};
+			name = Debug;
+		};
+		789479C32A69BA3C00D22A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slaney.evan.StudyPomodoroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyPomodoro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StudyPomodoro";
+			};
+			name = Release;
+		};
+		789479C52A69BA3C00D22A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slaney.evan.StudyPomodoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StudyPomodoro;
+			};
+			name = Debug;
+		};
+		789479C62A69BA3C00D22A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slaney.evan.StudyPomodoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StudyPomodoro;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		789479952A69BA3A00D22A06 /* Build configuration list for PBXProject "StudyPomodoro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789479BC2A69BA3C00D22A06 /* Debug */,
+				789479BD2A69BA3C00D22A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		789479BE2A69BA3C00D22A06 /* Build configuration list for PBXNativeTarget "StudyPomodoro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789479BF2A69BA3C00D22A06 /* Debug */,
+				789479C02A69BA3C00D22A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		789479C12A69BA3C00D22A06 /* Build configuration list for PBXNativeTarget "StudyPomodoroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789479C22A69BA3C00D22A06 /* Debug */,
+				789479C32A69BA3C00D22A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		789479C42A69BA3C00D22A06 /* Build configuration list for PBXNativeTarget "StudyPomodoroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789479C52A69BA3C00D22A06 /* Debug */,
+				789479C62A69BA3C00D22A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 789479922A69BA3A00D22A06 /* Project object */;
+}
