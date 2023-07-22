@@ -14,7 +14,6 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            
             TabView(selection: $selection) {
                 StudyScreenView()
                     .tabItem {

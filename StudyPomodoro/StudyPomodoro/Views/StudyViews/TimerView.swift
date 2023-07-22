@@ -38,7 +38,7 @@ struct TimerView: View {
                             
                             path.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
                         }
-                        .stroke(Color.blue, lineWidth: 10)
+                        .stroke(Color.green.gradient, lineWidth: 10)
                         VStack {
                             Text("\(minutes):\(seconds)")
                                 .onReceive(timer) { _ in
@@ -75,21 +75,22 @@ struct TimerView: View {
                                 .font(.system(size: 52))
                             HStack {
                                 if(isCountingDown) {
-                                    Image(systemName: "pause.fill")
-                                        .onTapGesture {
-                                            stopTimer()
-                                        }
-                                        .font(.system(size: 52))
-                                        .padding(15)
+                                    Button {
+                                        stopTimer()
+                                    } label: {
+                                        Image(systemName: "pause.fill")
+                                            .font(.system(size: 52))
+                                            .padding(15)
+                                    }
                                 } else {
-                                    Image(systemName: "play.fill")
-                                        .onTapGesture {
-                                            startTimer()
-                                        }
-                                        .font(.system(size: 52))
-                                        .padding(15)
+                                    Button {
+                                        startTimer()
+                                    } label: {
+                                        Image(systemName: "play.fill")
+                                            .font(.system(size: 52))
+                                            .padding(15)
+                                    }
                                 }
-                                
                                 Button {
                                     stopTimer()
                                     showingEndAlert = true
@@ -99,7 +100,7 @@ struct TimerView: View {
                                 .font(.system(size: 52))
                                 .padding(15)
                                 .alert(isPresented: $showingEndAlert) {
-                                    Alert(title: Text("Are you sure you want to end the session"), message: Text(""), primaryButton: .destructive(Text("End Session")) {
+                                    Alert(title: Text("Are you sure you want to end the session?"), message: Text(""), primaryButton: .destructive(Text("End Session")) {
                                         withAnimation {
                                             submissionFormPresented = true
                                         }

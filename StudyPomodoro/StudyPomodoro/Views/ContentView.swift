@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var loggedIn: Bool = false
+    
     var body: some View {
-        HomeView()
+        if(loggedIn) {
+            HomeView()
+                .transition(.move(edge: .trailing))
+        } else {
+            AuthView(loggedIn: $loggedIn)
+                .transition(.move(edge: .leading))
+        }
     }
 }
 

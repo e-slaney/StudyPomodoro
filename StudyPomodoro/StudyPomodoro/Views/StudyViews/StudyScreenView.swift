@@ -38,9 +38,11 @@ struct NavBackButton: View {
             }
         } label: {
             HStack {
-                Image(systemName: "x.circle")
-                Text("End Session")
+                Image(systemName: "x.circle.fill")
+                Text("Exit Session")
+                Spacer()
             }
+            .padding(15)
             .foregroundColor(Color.red)
         }
     }

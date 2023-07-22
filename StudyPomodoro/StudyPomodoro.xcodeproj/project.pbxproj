@@ -23,6 +23,12 @@
 		789479CC2A69D03900D22A06 /* StudyScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789479CB2A69D03900D22A06 /* StudyScreenView.swift */; };
 		789479CE2A69D1F000D22A06 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789479CD2A69D1F000D22A06 /* UserModel.swift */; };
 		789479D02A6AF3F500D22A06 /* StudyScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789479CF2A6AF3F500D22A06 /* StudyScreenModel.swift */; };
+		78B6EE5F2A6B6AD90089E733 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B6EE5E2A6B6AD90089E733 /* AuthView.swift */; };
+		78B6EE612A6B6AF50089E733 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B6EE602A6B6AF50089E733 /* LoginView.swift */; };
+		78B6EE632A6B6AFF0089E733 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B6EE622A6B6AFF0089E733 /* CreateAccountView.swift */; };
+		78B6EE6B2A6B710E0089E733 /* GoMocha-G73O.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78B6EE6A2A6B710E0089E733 /* GoMocha-G73O.ttf */; };
+		78B6EE6D2A6B71210089E733 /* FuzzyBubbles-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78B6EE6C2A6B71210089E733 /* FuzzyBubbles-Bold.ttf */; };
+		78B6EE6F2A6B712A0089E733 /* FuzzyBubbles-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78B6EE6E2A6B712A0089E733 /* FuzzyBubbles-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,12 @@
 		789479CB2A69D03900D22A06 /* StudyScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyScreenView.swift; sourceTree = "<group>"; };
 		789479CD2A69D1F000D22A06 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		789479CF2A6AF3F500D22A06 /* StudyScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyScreenModel.swift; sourceTree = "<group>"; };
+		78B6EE5E2A6B6AD90089E733 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		78B6EE602A6B6AF50089E733 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		78B6EE622A6B6AFF0089E733 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		78B6EE6A2A6B710E0089E733 /* GoMocha-G73O.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoMocha-G73O.ttf"; sourceTree = "<group>"; };
+		78B6EE6C2A6B71210089E733 /* FuzzyBubbles-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuzzyBubbles-Bold.ttf"; sourceTree = "<group>"; };
+		78B6EE6E2A6B712A0089E733 /* FuzzyBubbles-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuzzyBubbles-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +137,7 @@
 		7894799C2A69BA3A00D22A06 /* StudyPomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				78B6EE692A6B70F80089E733 /* Fonts */,
 				7894799D2A69BA3A00D22A06 /* StudyPomodoroApp.swift */,
 				789479C82A69BA6100D22A06 /* Models */,
 				789479C72A69BA5200D22A06 /* Views */,
@@ -162,9 +175,9 @@
 		789479C72A69BA5200D22A06 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				78B6EE5D2A6B6AAE0089E733 /* LoginViews */,
 				785121AC2A6B12DC00B8FACF /* StudyViews */,
 				7894799F2A69BA3A00D22A06 /* ContentView.swift */,
-				789479C92A69BB8100D22A06 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +189,27 @@
 				789479CF2A6AF3F500D22A06 /* StudyScreenModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		78B6EE5D2A6B6AAE0089E733 /* LoginViews */ = {
+			isa = PBXGroup;
+			children = (
+				789479C92A69BB8100D22A06 /* HomeView.swift */,
+				78B6EE5E2A6B6AD90089E733 /* AuthView.swift */,
+				78B6EE602A6B6AF50089E733 /* LoginView.swift */,
+				78B6EE622A6B6AFF0089E733 /* CreateAccountView.swift */,
+			);
+			path = LoginViews;
+			sourceTree = "<group>";
+		};
+		78B6EE692A6B70F80089E733 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				78B6EE6E2A6B712A0089E733 /* FuzzyBubbles-Regular.ttf */,
+				78B6EE6C2A6B71210089E733 /* FuzzyBubbles-Bold.ttf */,
+				78B6EE6A2A6B710E0089E733 /* GoMocha-G73O.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,8 +316,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B6EE6F2A6B712A0089E733 /* FuzzyBubbles-Regular.ttf in Resources */,
 				789479A52A69BA3B00D22A06 /* Preview Assets.xcassets in Resources */,
 				789479A22A69BA3B00D22A06 /* Assets.xcassets in Resources */,
+				78B6EE6D2A6B71210089E733 /* FuzzyBubbles-Bold.ttf in Resources */,
+				78B6EE6B2A6B710E0089E733 /* GoMocha-G73O.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +347,7 @@
 			files = (
 				785121A92A6B10FF00B8FACF /* TimerView.swift in Sources */,
 				785121A32A6B10A400B8FACF /* SessionView.swift in Sources */,
+				78B6EE5F2A6B6AD90089E733 /* AuthView.swift in Sources */,
 				789479CC2A69D03900D22A06 /* StudyScreenView.swift in Sources */,
 				785121A72A6B10F600B8FACF /* TaskListView.swift in Sources */,
 				789479D02A6AF3F500D22A06 /* StudyScreenModel.swift in Sources */,
@@ -317,6 +355,8 @@
 				789479CA2A69BB8100D22A06 /* HomeView.swift in Sources */,
 				789479A02A69BA3A00D22A06 /* ContentView.swift in Sources */,
 				789479CE2A69D1F000D22A06 /* UserModel.swift in Sources */,
+				78B6EE632A6B6AFF0089E733 /* CreateAccountView.swift in Sources */,
+				78B6EE612A6B6AF50089E733 /* LoginView.swift in Sources */,
 				785121A52A6B10D900B8FACF /* StudyView.swift in Sources */,
 				7894799E2A69BA3A00D22A06 /* StudyPomodoroApp.swift in Sources */,
 			);
@@ -479,6 +519,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"StudyPomodoro/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StudyPomodoro/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -507,6 +548,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"StudyPomodoro/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StudyPomodoro/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
