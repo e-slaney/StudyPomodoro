@@ -25,7 +25,7 @@ struct TimerView: View {
         
     var body: some View {
         if(submissionFormPresented) {
-            EndSessionView(submissionFormPresented: $submissionFormPresented, isPresented: $isPresented)
+            //
         } else {
             GeometryReader { geom in
                 VStack {

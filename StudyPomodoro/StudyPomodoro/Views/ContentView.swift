@@ -10,15 +10,23 @@ import SwiftUI
 struct ContentView: View {
     
     @State var loggedIn: Bool = false
+    @State var createAccount: Bool = false
     
     var body: some View {
-        if(loggedIn) {
-            HomeView()
-                .transition(.move(edge: .trailing))
-        } else {
-            AuthView(loggedIn: $loggedIn)
-                .transition(.move(edge: .leading))
+        VStack {
+            ZStack {
+                if(loggedIn) {
+                    Text("Will Eventually Be Home Page")
+                } else {
+                    if(createAccount) {
+                        CreateAccountView(createAccount: $createAccount)
+                    } else {
+                        LoginPageView(createAccount: $createAccount)
+                    }
+                }
+            }
         }
+        
     }
 }
 
