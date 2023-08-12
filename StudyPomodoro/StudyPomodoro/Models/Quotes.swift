@@ -15,7 +15,7 @@ struct Quote: Decodable {
 func getQuote() -> Quote {
     /*
     let headers = [
-        "X-RapidAPI-Key": "e746244d1bmsh9903ab1d1b89591p100087jsnbaa1b3fed8ae",
+        "X-RapidAPI-Key": "",
         "X-RapidAPI-Host": "quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com"
     ]
     
