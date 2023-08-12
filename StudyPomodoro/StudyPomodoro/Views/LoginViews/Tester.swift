@@ -9,8 +9,12 @@ import SwiftUI
 
 struct Tester: View {
     var body: some View {
-        VStack {
-            BounceAnimationImageView(image: "SPLogo", startTime: 0.0)
+        ScrollView {
+            ForEach(0..<10, id: \.self) { _ in
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: 300, height: 300)
+            }
         }
     }
 }

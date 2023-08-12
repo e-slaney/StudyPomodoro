@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var loggedIn: Bool = false
+    @State var loggedIn: Bool = true
     @State var createAccount: Bool = false
     
     var body: some View {
         VStack {
             ZStack {
                 if(loggedIn) {
-                    Text("Will Eventually Be Home Page")
+                    HomeView()
                 } else {
                     if(createAccount) {
                         CreateAccountView(createAccount: $createAccount)

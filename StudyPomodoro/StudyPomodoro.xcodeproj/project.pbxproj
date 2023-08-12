@@ -21,6 +21,9 @@
 		78B6EE6F2A6B712A0089E733 /* FuzzyBubbles-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78B6EE6E2A6B712A0089E733 /* FuzzyBubbles-Regular.ttf */; };
 		78F171282A841D1F00E54F2B /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F171272A841D1F00E54F2B /* CreateAccountView.swift */; };
 		78F1712A2A8423BA00E54F2B /* SPCreateAccount.svg in Resources */ = {isa = PBXBuildFile; fileRef = 78F171292A8423B900E54F2B /* SPCreateAccount.svg */; };
+		78F1712C2A86A0D800E54F2B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F1712B2A86A0D800E54F2B /* HomeView.swift */; };
+		78F1712E2A86A8E300E54F2B /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F1712D2A86A8E300E54F2B /* StudyView.swift */; };
+		78F171302A87036600E54F2B /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F1712F2A87036600E54F2B /* TaskListView.swift */; };
 		78F3356B2A82F34900D514D7 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F3356A2A82F34900D514D7 /* LoginPageView.swift */; };
 		78F3356E2A832C3900D514D7 /* SPLogo.svg in Resources */ = {isa = PBXBuildFile; fileRef = 78F3356D2A832C3900D514D7 /* SPLogo.svg */; };
 		78F335702A83EABA00D514D7 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F3356F2A83EABA00D514D7 /* Tester.swift */; };
@@ -63,6 +66,9 @@
 		78B6EE6E2A6B712A0089E733 /* FuzzyBubbles-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuzzyBubbles-Regular.ttf"; sourceTree = "<group>"; };
 		78F171272A841D1F00E54F2B /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		78F171292A8423B900E54F2B /* SPCreateAccount.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SPCreateAccount.svg; sourceTree = "<group>"; };
+		78F1712B2A86A0D800E54F2B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		78F1712D2A86A8E300E54F2B /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
+		78F1712F2A87036600E54F2B /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		78F3356A2A82F34900D514D7 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		78F3356D2A832C3900D514D7 /* SPLogo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SPLogo.svg; sourceTree = "<group>"; };
 		78F3356F2A83EABA00D514D7 /* Tester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
@@ -99,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				785121A82A6B10FF00B8FACF /* TimerView.swift */,
+				78F1712D2A86A8E300E54F2B /* StudyView.swift */,
+				78F1712F2A87036600E54F2B /* TaskListView.swift */,
 			);
 			path = StudyViews;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				7894799F2A69BA3A00D22A06 /* ContentView.swift */,
+				78F1712B2A86A0D800E54F2B /* HomeView.swift */,
 				78B6EE5D2A6B6AAE0089E733 /* LoginViews */,
 				78F335672A82B63E00D514D7 /* StatsViews */,
 				78F335662A82B63500D514D7 /* ProfileViews */,
@@ -360,7 +369,10 @@
 				785121A92A6B10FF00B8FACF /* TimerView.swift in Sources */,
 				789479A02A69BA3A00D22A06 /* ContentView.swift in Sources */,
 				78F171282A841D1F00E54F2B /* CreateAccountView.swift in Sources */,
+				78F1712E2A86A8E300E54F2B /* StudyView.swift in Sources */,
 				789479CE2A69D1F000D22A06 /* UserModel.swift in Sources */,
+				78F1712C2A86A0D800E54F2B /* HomeView.swift in Sources */,
+				78F171302A87036600E54F2B /* TaskListView.swift in Sources */,
 				78F3356B2A82F34900D514D7 /* LoginPageView.swift in Sources */,
 				7894799E2A69BA3A00D22A06 /* StudyPomodoroApp.swift in Sources */,
 			);

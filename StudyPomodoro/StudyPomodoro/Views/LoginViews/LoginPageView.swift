@@ -44,14 +44,14 @@ struct LoginPageView: View {
                 //Email sign-in
                 VStack(alignment: .leading) {
                     Text("Sign In")
-                        .font(.custom("Chalkboard SE", size: 32))
+                        .font(.custom("Futura", size: 32))
                         .padding(.bottom)
                         .fontWeight(.bold)
                     Text("Email")
                         .padding(.bottom, -5)
-                        .font(.custom("Chalkboard SE", size: 24))
+                        .font(.custom("Futura", size: 24))
                     TextField("Email", text: $email)
-                        .font(.custom("Chalkboard SE", size: 20))
+                        .font(.custom("Futura", size: 20))
                         .textFieldStyle(.roundedBorder)
                         .padding(.bottom)
                         .shadow(radius: 3.0, x: 3.0)
@@ -59,9 +59,9 @@ struct LoginPageView: View {
                     //Password sign-in
                     Text("Password")
                         .padding(.bottom, -5)
-                        .font(.custom("Chalkboard SE", size: 24))
+                        .font(.custom("Futura", size: 24))
                     SecureField("Password", text: $password)
-                        .font(.custom("Chalkboard SE", size: 20))
+                        .font(.custom("Futura", size: 20))
                         .textFieldStyle(.roundedBorder)
                         .shadow(radius: 3.0, x: 3.0)
 
@@ -76,7 +76,7 @@ struct LoginPageView: View {
                                 .frame(height: 50)
                                 .shadow(radius: 3.0, x: 3.0)
                             Text("Sign in")
-                                .foregroundColor(.white).font(.custom("Chalkboard SE", size: 20))
+                                .foregroundColor(.white).font(.custom("Futura", size: 20))
                         }
                     }
                     .padding()
@@ -97,7 +97,7 @@ struct LoginPageView: View {
                                 .foregroundColor(.red)
                         }
                     }
-                    .font(.custom("Chalkboard SE", size: 16))
+                    .font(.custom("Futura", size: 16))
                 }
                 .padding(20)
             }

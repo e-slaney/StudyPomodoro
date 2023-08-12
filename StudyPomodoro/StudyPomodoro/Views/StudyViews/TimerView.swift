@@ -9,110 +9,105 @@ import SwiftUI
 
 struct TimerView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var cycleSelections: [String] = ["pomodoro", "shortBreak", "longBreak"]
     @State var cycle: String = "pomodoro"
     @State var pomodoroCount: Int = 0
-    @State var countdownSeconds: Int = (25*60)
-    @State var minutes: String = String(25)
+    @State var countdownSeconds: Int = (60)
+    @State var minutes: String = String(1)
     @State var seconds: String = "00"
     @State var isCountingDown = false
     @State var endAngle: Angle = Angle(degrees: 360)
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var showingEndAlert: Bool = false
-    @Binding var isPresented: Bool
-    @Binding var submissionFormPresented: Bool
-
-        
+    
     var body: some View {
-        if(submissionFormPresented) {
-            //
-        } else {
-            GeometryReader { geom in
-                VStack {
-                    ZStack {
-                        Path { path in
-                            let center = CGPoint(x: geom.size.width / 2, y: geom.size.height / 2)
-                            let radius = 150.0
-                            let startAngle = Angle(degrees: 0)
-                            let endAngle = self.endAngle
-                            
-                            path.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
-                        }
-                        .stroke(Color.green.gradient, lineWidth: 10)
-                        VStack {
-                            Text("\(minutes):\(seconds)")
-                                .onReceive(timer) { _ in
-                                    if(isCountingDown) {
-                                        countdownSeconds -= 1
-                                        let (minutes, seconds) = secondsToMinutesSeconds(countdownSeconds)
-                                        if(minutes < 10) {
-                                            self.minutes = "0" + String(minutes)
-                                        } else {
-                                            self.minutes = String(minutes)
-                                        }
-                                        if(seconds < 10) {
-                                            self.seconds = "0" + String(seconds)
-                                        } else {
-                                            self.seconds = String(seconds)
-                                        }
-                                        
-                                        var totalCount: Int
-                                        if(cycle == "pomodoro") {
-                                            totalCount = (60*25)
-                                        } else if(cycle == "shortBreak") {
-                                            totalCount = (60*5)
-                                        } else {
-                                            totalCount = (60*15)
-                                        }
-                                        
-                                        self.endAngle = Angle(degrees: Double(360 * countdownSeconds) / Double(totalCount))
-                                        if(countdownSeconds == 0) {
-                                            isCountingDown = false
-                                            setTimer()
-                                        }
-                                    }
-                                }
-                                .font(.system(size: 52))
-                            HStack {
-                                if(isCountingDown) {
-                                    Button {
-                                        stopTimer()
-                                    } label: {
-                                        Image(systemName: "pause.fill")
-                                            .font(.system(size: 52))
-                                            .padding(15)
-                                    }
-                                } else {
-                                    Button {
-                                        startTimer()
-                                    } label: {
-                                        Image(systemName: "play.fill")
-                                            .font(.system(size: 52))
-                                            .padding(15)
-                                    }
-                                }
+        ZStack {
+            VStack {
+                HStack {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.white)
+                            .padding(.leading)
+                            .font(.custom("Futura", size: 26))
+                    }
+                    Spacer()
+                }
+                ZStack {
+                    TimerArc(endAngle: $endAngle)
+                    VStack {
+                        Text("\(minutes):\(seconds)")
+                            .foregroundColor(.white)
+                            .onReceive(timer) { _ in
+                                countdownAdjustment()
+                            }
+                        HStack {
+                            if(isCountingDown) {
                                 Button {
                                     stopTimer()
-                                    showingEndAlert = true
                                 } label: {
-                                    Image(systemName: "stop.fill")
+                                    Image(systemName: "pause.fill")
+                                        .padding(15)
+                                        .foregroundColor(.white)
                                 }
-                                .font(.system(size: 52))
-                                .padding(15)
-                                .alert(isPresented: $showingEndAlert) {
-                                    Alert(title: Text("Are you sure you want to end the session?"), message: Text(""), primaryButton: .destructive(Text("End Session")) {
-                                        withAnimation {
-                                            submissionFormPresented = true
-                                        }
-                                    }, secondaryButton: .default(Text("Continue Studying")))
+                            } else {
+                                Button {
+                                    startTimer()
+                                } label: {
+                                    Image(systemName: "play.fill")
+                                        .padding(15)
+                                        .foregroundColor(.white)
                                 }
                             }
+                            Button {
+                                stopTimer()
+                                showingEndAlert = true
+                            } label: {
+                                Image(systemName: "stop.fill")
+                                    .foregroundColor(.white)
+                            }
+                            .padding(15)
                         }
                     }
                 }
             }
+            .font(.custom("Futura", size: 60))
         }
         
+    }
+    
+    private func countdownAdjustment() {
+        if(isCountingDown) {
+            countdownSeconds -= 1
+            let (minutes, seconds) = secondsToMinutesSeconds(countdownSeconds)
+            if(minutes < 10) {
+                self.minutes = String(minutes)
+            } else {
+                self.minutes = String(minutes)
+            }
+            if(seconds < 10) {
+                self.seconds = "0" + String(seconds)
+            } else {
+                self.seconds = String(seconds)
+            }
+            
+            var totalCount: Int
+            if(cycle == "pomodoro") {
+                totalCount = (60*25)
+            } else if(cycle == "shortBreak") {
+                totalCount = (60*5)
+            } else {
+                totalCount = (60*15)
+            }
+            
+            self.endAngle = Angle(degrees: Double(360 * countdownSeconds) / Double(60))
+            if(countdownSeconds == 0) {
+                isCountingDown = false
+                setTimer()
+            }
+        }
     }
     
     private func setTimer() {
@@ -167,4 +162,43 @@ struct TimerView: View {
         return ((seconds % 3600) / 60, (seconds % 3600) % 60)
     }
     
+}
+
+struct TimerArc: View {
+    @Binding var endAngle: Angle
+    
+    var body: some View {
+        GeometryReader { geom in
+            ZStack {
+                Path { path in
+                    let center = CGPoint(x: geom.size.width / 2, y: geom.size.height / 2)
+                    let radius = 150.0
+                    let startAngle = Angle(degrees: 0)
+                    let endAngle = Angle(degrees: 360)
+                    
+                    path.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
+                }
+                .stroke(Color(red: 1.0, green: 0.68, blue: 0.66), lineWidth: 8.0)
+                Path { path in
+                    let center = CGPoint(x: geom.size.width / 2, y: geom.size.height / 2)
+                    let radius = 150.0
+                    let startAngle = Angle(degrees: 0)
+                    let endAngle = self.endAngle
+                    
+                    path.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
+                }
+                .stroke(style: StrokeStyle(lineWidth: 10.0, lineCap: .round))
+                .foregroundColor(Color(red: 0.5, green: 0.0, blue: 0.0))
+                
+            }
+            
+        }
+        .navigationBarBackButtonHidden(true)
+    }
+}
+
+struct TimerView_Previews: PreviewProvider {
+    static var previews: some View {
+        TimerView()
+    }
 }
