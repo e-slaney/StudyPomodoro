@@ -24,6 +24,7 @@
 		78F1712C2A86A0D800E54F2B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F1712B2A86A0D800E54F2B /* HomeView.swift */; };
 		78F1712E2A86A8E300E54F2B /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F1712D2A86A8E300E54F2B /* StudyView.swift */; };
 		78F171302A87036600E54F2B /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F1712F2A87036600E54F2B /* TaskListView.swift */; };
+		78F171322A87F5F100E54F2B /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F171312A87F5F100E54F2B /* Quotes.swift */; };
 		78F3356B2A82F34900D514D7 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F3356A2A82F34900D514D7 /* LoginPageView.swift */; };
 		78F3356E2A832C3900D514D7 /* SPLogo.svg in Resources */ = {isa = PBXBuildFile; fileRef = 78F3356D2A832C3900D514D7 /* SPLogo.svg */; };
 		78F335702A83EABA00D514D7 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F3356F2A83EABA00D514D7 /* Tester.swift */; };
@@ -69,6 +70,7 @@
 		78F1712B2A86A0D800E54F2B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		78F1712D2A86A8E300E54F2B /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		78F1712F2A87036600E54F2B /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		78F171312A87F5F100E54F2B /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 		78F3356A2A82F34900D514D7 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		78F3356D2A832C3900D514D7 /* SPLogo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SPLogo.svg; sourceTree = "<group>"; };
 		78F3356F2A83EABA00D514D7 /* Tester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				789479CD2A69D1F000D22A06 /* UserModel.swift */,
+				78F171312A87F5F100E54F2B /* Quotes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				789479A02A69BA3A00D22A06 /* ContentView.swift in Sources */,
 				78F171282A841D1F00E54F2B /* CreateAccountView.swift in Sources */,
 				78F1712E2A86A8E300E54F2B /* StudyView.swift in Sources */,
+				78F171322A87F5F100E54F2B /* Quotes.swift in Sources */,
 				789479CE2A69D1F000D22A06 /* UserModel.swift in Sources */,
 				78F1712C2A86A0D800E54F2B /* HomeView.swift in Sources */,
 				78F171302A87036600E54F2B /* TaskListView.swift in Sources */,

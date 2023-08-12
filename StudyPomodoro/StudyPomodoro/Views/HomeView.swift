@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
+    private var quote: Quote = getQuote()
+    @State var fadingQuote = false
+    @State var fadingAuthor = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -18,7 +22,16 @@ struct HomeView: View {
                         Spacer()
                         SettingsButton()
                     }
-                    Spacer()
+                    Text("\(quote.text)")
+                        .font(.custom("Futura", size: 22))
+                        .multilineTextAlignment(.center)
+                        .padding()
+                    HStack {
+                        Spacer()
+                        Text("\(quote.author)")
+                            .font(.custom("Futura", size: 20))
+                            .padding()
+                    }
                     NavigationLink {
                         StudyView()
                     } label: {
@@ -30,19 +43,9 @@ struct HomeView: View {
                     ProfileButton()
                     
                     Spacer()
+
                 }
             }
-            
-        }
-    }
-}
-
-struct SampleView: View {
-    
-    var body: some View {
-        VStack {
-            Text("Sample")
-            Text("Sample")
         }
     }
 }

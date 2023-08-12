@@ -9,15 +9,35 @@ import SwiftUI
 
 struct Tester: View {
     var body: some View {
-        ScrollView {
-            ForEach(0..<10, id: \.self) { _ in
-                Rectangle()
-                    .fill(Color.red)
-                    .frame(width: 300, height: 300)
+        NavigationStack {
+            NavigationLink("Transitioner") {
+                withAnimation {
+                    OtherSample()
+                }
             }
         }
     }
 }
+
+struct OtherSample: View {
+    var body: some View {
+        VStack {
+            Text("Animated Effect1")
+                .transition(.move(edge: .top))
+                .padding()
+            Text("Animated Effect2")
+                .animation(.linear(duration: 3.5))
+                .padding()
+            Text("Animated Effect3")
+                .transition(.scale(scale: 300))
+                .padding()
+            Text("Animated Effect4")
+                .transition(.slide)
+                .padding()
+        }
+    }
+}
+
 
 struct Tester_Previews: PreviewProvider {
     static var previews: some View {

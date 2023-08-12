@@ -23,6 +23,8 @@ struct TimerView: View {
     
     var body: some View {
         ZStack {
+            LinearGradient(colors: [Color(red: 1.0, green: 0.35, blue: 0.35), .red], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
             VStack {
                 HStack {
                     Button {
@@ -189,7 +191,6 @@ struct TimerArc: View {
                 }
                 .stroke(style: StrokeStyle(lineWidth: 10.0, lineCap: .round))
                 .foregroundColor(Color(red: 0.5, green: 0.0, blue: 0.0))
-                
             }
             
         }
