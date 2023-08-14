@@ -18,46 +18,70 @@ struct CreateAccountView: View {
     
     var body: some View {
         ZStack {
-            Color(red: 1.0, green: 0.58, blue: 0.56)
-                    .ignoresSafeArea()
+            LinearGradient(colors: [Color(red: 1.0, green: 0.88, blue: 0.86), Color(red: 1.0, green: 0.58, blue: 0.56)], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
             ScrollView {
-                ZStack {
-                    Circle()
-                        .foregroundColor(.white)
-                        .frame(width: 190, height: 190)
-                        .shadow(radius: 3.0, x: 3.0)
-                    BounceAnimationImageView(image: "SPCreateAccount", startTime: 0.0)
-                        .offset(x: 0, y: 25)
-                        .shadow(radius: 3.0, x: 3.0)
+                //Cancel Button
+                HStack {
+                    Button {
+                        withAnimation {
+                            createAccount.toggle()
+                        }
+                    } label: {
+                        ZStack {
+                            Image(systemName: "multiply")
+                                .font(.system(size: 32))
+                                .foregroundColor(.white)
+                                .shadow(radius: 3.0, x: 3.0, y: 3.0)
+                            
+                        }
+                        
+                    }
+                    Spacer()
                 }
+                .padding(.leading)
+                
+                //Logo
+                Image("SPCreateAccount")
+                    .resizable()
+                    .frame(width: 175, height: 175)
+                    .offset(x: 0, y: 15)
+                    .shadow(radius: 3.0, x: 3.0, y: 3.0)
+                
+                //Create Account Form
                 VStack(alignment: .leading) {
                     Text("Create Account")
-                        .font(.custom("Chalkboard SE", size: 32))
+                        .font(.custom("Avenir Next", size: 32))
+                        .fontWeight(.bold)
                     Spacer()
                     Text("First Name")
-                        .font(.custom("Chalkboard SE", size: 24))
+                        .font(.custom("Avenir Next", size: 24))
                     TextField("First Name", text: $firstName)
-                        .font(.custom("Chalkboard SE", size: 20))
+                        .font(.custom("Avenir Next", size: 20))
                         .textFieldStyle(.roundedBorder)
-                        .shadow(radius: 3.0, x: 3.0)
+                        .shadow(radius: 3.0, x: 3.0, y: 3.0)
+                        .cornerRadius(20.0)
                     Text("Last Name")
-                        .font(.custom("Chalkboard SE", size: 24))
+                        .font(.custom("Avenir Next", size: 24))
                     TextField("Last Name", text: $lastName)
-                        .font(.custom("Chalkboard SE", size: 20))
+                        .font(.custom("Avenir Next", size: 20))
                         .textFieldStyle(.roundedBorder)
-                        .shadow(radius: 3.0, x: 3.0)
+                        .shadow(radius: 3.0, x: 3.0, y: 3.0)
+                        .cornerRadius(20.0)
                     Text("Email")
-                        .font(.custom("Chalkboard SE", size: 24))
+                        .font(.custom("Avenir Next", size: 24))
                     TextField("Email", text: $email)
-                        .font(.custom("Chalkboard SE", size: 20))
+                        .font(.custom("Avenir Next", size: 20))
                         .textFieldStyle(.roundedBorder)
-                        .shadow(radius: 3.0, x: 3.0)
+                        .shadow(radius: 3.0, x: 3.0, y: 3.0)
+                        .cornerRadius(20.0)
                     Text("Password")
-                        .font(.custom("Chalkboard SE", size: 24))
+                        .font(.custom("Avenir Next", size: 24))
                     SecureField("Password", text: $password)
-                        .font(.custom("Chalkboard SE", size: 20))
+                        .font(.custom("Avenir Next", size: 20))
                         .textFieldStyle(.roundedBorder)
-                        .shadow(radius: 3.0, x: 3.0)
+                        .shadow(radius: 3.0, x: 3.0, y: 3.0)
+                        .cornerRadius(20.0)
                 }
                 .padding(.leading)
                 .padding(.trailing)
@@ -67,12 +91,12 @@ struct CreateAccountView: View {
                     }
                 } label: {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 20.0)
+                        RoundedRectangle(cornerRadius: 15.0)
                             .foregroundColor(.red)
                             .frame(height: 50)
-                            .shadow(radius: 3.0, x: 3.0)
+                            .shadow(radius: 3.0, x: 3.0, y: 3.0)
                         Text("Create Account")
-                            .foregroundColor(.white).font(.custom("Chalkboard SE", size: 20))
+                            .foregroundColor(.white).font(.custom("Avenir Next", size: 20))
                     }
                 }
                 .padding()

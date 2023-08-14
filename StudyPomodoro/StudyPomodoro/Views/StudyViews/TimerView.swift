@@ -39,43 +39,65 @@ struct TimerView: View {
                 }
                 ZStack {
                     TimerArc(endAngle: $endAngle)
-                    VStack {
-                        Text("\(minutes):\(seconds)")
-                            .foregroundColor(.white)
-                            .onReceive(timer) { _ in
-                                countdownAdjustment()
-                            }
-                        HStack {
-                            if(isCountingDown) {
-                                Button {
-                                    stopTimer()
-                                } label: {
-                                    Image(systemName: "pause.fill")
-                                        .padding(15)
-                                        .foregroundColor(.white)
-                                }
-                            } else {
-                                Button {
-                                    startTimer()
-                                } label: {
-                                    Image(systemName: "play.fill")
-                                        .padding(15)
-                                        .foregroundColor(.white)
-                                }
-                            }
-                            Button {
-                                stopTimer()
-                                showingEndAlert = true
-                            } label: {
-                                Image(systemName: "stop.fill")
+                    Text("\(minutes):\(seconds)")
+                        .font(.custom("Futura", size: 60))
+                        .foregroundColor(.white)
+                        .onReceive(timer) { _ in
+                            countdownAdjustment()
+                        }
+                }
+                HStack {
+                    if(isCountingDown) {
+                        Button {
+                            stopTimer()
+                        } label: {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 15.0)
+                                    .frame(width: 160, height: 60)
                                     .foregroundColor(.white)
+                                    .shadow(radius: 3.0, x: 3.0, y: 3.0)
+                                Text("Pause")
+                                    .foregroundColor(.red)
+                                    .font(.custom("Futura", size: 32))
                             }
-                            .padding(15)
+                        }
+                        .padding([.leading, .trailing])
+                    } else {
+                        Button {
+                            startTimer()
+                        } label: {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 15.0)
+                                    .frame(width: 160, height: 60)
+                                    .foregroundColor(.white)
+                                    .shadow(radius: 3.0, x: 3.0, y: 3.0)
+                                Text("Start")
+                                    .foregroundColor(.red)
+                                    .font(.custom("Futura", size: 32))
+                            }
+                        }
+                        .padding([.leading, .trailing])
+                    }
+                    Button {
+                        stopTimer()
+                        showingEndAlert = true
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 15.0)
+                                .frame(width: 160, height: 60)
+                                .foregroundColor(.white)
+                                .shadow(radius: 3.0, x: 3.0, y: 3.0)
+                            Text("Stop")
+                                .foregroundColor(.red)
+                                .font(.custom("Futura", size: 32))
                         }
                     }
+                    .padding([.leading, .trailing])
+
                 }
+                LineBreakView()
             }
-            .font(.custom("Futura", size: 60))
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
         }
         
     }
@@ -166,12 +188,33 @@ struct TimerView: View {
     
 }
 
+struct LineBreakView: View {
+    
+    var body: some View {
+        GeometryReader { geom in
+            Path { path in
+                path.move(to: CGPoint(x: 25, y: 25))
+                path.addLine(to: CGPoint(x: geom.size.width - 25, y: 25))
+            }
+            .stroke(style: StrokeStyle(lineWidth: 4.0, lineCap: .round))
+            .opacity(0.2)
+        }
+        .frame(height: 30)
+        VStack {
+            Text("Focus Tasks")
+        }
+    }
+}
+
 struct TimerArc: View {
     @Binding var endAngle: Angle
     
     var body: some View {
         GeometryReader { geom in
             ZStack {
+                Circle()
+                    .frame(width: 300, height: 300)
+                    .opacity(0.25)
                 Path { path in
                     let center = CGPoint(x: geom.size.width / 2, y: geom.size.height / 2)
                     let radius = 150.0
@@ -194,6 +237,7 @@ struct TimerArc: View {
             }
             
         }
+        .frame(height: 340)
         .navigationBarBackButtonHidden(true)
     }
 }
