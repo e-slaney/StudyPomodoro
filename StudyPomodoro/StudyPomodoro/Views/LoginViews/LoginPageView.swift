@@ -24,18 +24,18 @@ struct LoginPageView: View {
                     Circle()
                         .foregroundColor(.white)
                         .frame(width: 200, height: 200)
-                        .shadow(radius: 3.0, x: 3.0)
+                        .shadow(radius: 3.0, x: 3.0, y: 3.0)
                     VStack {
                         BounceAnimationView(text: "Study", startTime: 0.5)
                             .offset(x: 0, y: 50)
-                            .shadow(radius: 3.0, x: 3.0)
+                            .shadow(radius: 3.0, x: 3.0, y: 3.0)
                             .foregroundColor(.red)
                         BounceAnimationImageView(image: "SPLogo", startTime: 0.0)
                             .offset(x: 0, y: -10)
-                            .shadow(radius: 3.0, x: 3.0)
+                            .shadow(radius: 3.0, x: 3.0, y: 3.0)
                         BounceAnimationView(text: "Pomodoro", startTime: 1.0)
                             .offset(x: 0, y: -70)
-                            .shadow(radius: 3.0, x: 3.0)
+                            .shadow(radius: 3.0, x: 3.0, y: 3.0)
                             .foregroundColor(.red)
                     }
                 }
@@ -54,8 +54,8 @@ struct LoginPageView: View {
                         .font(.custom("Futura", size: 20))
                         .textFieldStyle(.roundedBorder)
                         .padding(.bottom)
-                        .shadow(radius: 3.0, x: 3.0)
-                    
+                        .shadow(radius: 3.0, x: 3.0, y: 3.0)
+
                     //Password sign-in
                     Text("Password")
                         .padding(.bottom, -5)
@@ -63,7 +63,7 @@ struct LoginPageView: View {
                     SecureField("Password", text: $password)
                         .font(.custom("Futura", size: 20))
                         .textFieldStyle(.roundedBorder)
-                        .shadow(radius: 3.0, x: 3.0)
+                        .shadow(radius: 3.0, x: 3.0, y: 3.0)
 
                     //Sign-in button
                     
@@ -74,7 +74,8 @@ struct LoginPageView: View {
                             RoundedRectangle(cornerRadius: 20.0)
                                 .foregroundColor(.red)
                                 .frame(height: 50)
-                                .shadow(radius: 3.0, x: 3.0)
+                                .shadow(radius: 3.0, x: 3.0, y: 3.0)
+
                             Text("Sign in")
                                 .foregroundColor(.white).font(.custom("Futura", size: 20))
                         }

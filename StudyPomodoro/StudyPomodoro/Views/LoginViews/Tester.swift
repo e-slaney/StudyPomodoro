@@ -9,12 +9,33 @@ import SwiftUI
 
 struct Tester: View {
     var body: some View {
-        NavigationStack {
-            NavigationLink("Transitioner") {
-                withAnimation {
-                    OtherSample()
-                }
+        VStack(alignment: .leading) {
+            HStack {
+                Spacer()
+                SettingsButton()
             }
+            Text("QUOTE")
+                .font(.custom("Futura", size: 22))
+                .multilineTextAlignment(.leading)
+                .padding([.leading, .trailing], 50)
+            HStack {
+                Spacer()
+                Text("AUTHOR")
+                    .font(.custom("Futura", size: 20))
+                    .padding()
+            }
+            NavigationLink {
+                StudyView()
+            } label: {
+                StudyButton()
+            }
+            
+            StatisticsButton()
+            
+            ProfileButton()
+            
+            Spacer()
+
         }
     }
 }

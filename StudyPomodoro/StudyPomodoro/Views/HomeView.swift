@@ -17,33 +17,60 @@ struct HomeView: View {
             ZStack {
                 Color(red: 1.0, green: 0.78, blue: 0.76)
                     .ignoresSafeArea()
-                VStack {
+                VStack(alignment: .leading) {
                     HStack {
+                        VStack(alignment: .leading) {
+                            BounceAnimationView(text: "Study", startTime: 0.0)
+                            BounceAnimationView(text: "Pomodoro", startTime: 0.0)
+                        }
+                        .foregroundColor(.red)
+                        .shadow(radius: 3.0, x: 3.0, y: 3.0)
                         Spacer()
-                        SettingsButton()
+                        VStack {
+                            NavigationLink {
+                                EmptyView()
+                            } label: {
+                                SettingsButton()
+                                    .padding(.bottom, 60)
+                            }
+                        }
                     }
-                    Text("\(quote.text)")
-                        .font(.custom("Futura", size: 22))
-                        .multilineTextAlignment(.center)
-                        .padding()
-                    HStack {
-                        Spacer()
-                        Text("\(quote.author)")
-                            .font(.custom("Futura", size: 20))
-                            .padding()
-                    }
+                    .padding([.leading, .trailing])
+    
+                    Spacer()
                     NavigationLink {
                         StudyView()
                     } label: {
                         StudyButton()
+                            .padding(.leading)
                     }
                     
-                    StatisticsButton()
+                    NavigationLink {
+                        EmptyView()
+                    } label: {
+                        StatisticsButton()
+                            .padding(.leading)
+                    }
                     
-                    ProfileButton()
+                    NavigationLink {
+                        EmptyView()
+                    } label: {
+                        ProfileButton()
+                            .padding(.leading)
+                    }
                     
                     Spacer()
-
+                    Text("\(quote.text)")
+                        .font(.custom("Futura", size: 22))
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading)
+                    HStack {
+                        Spacer()
+                        Text("\(quote.author)")
+                            .font(.custom("Futura", size: 20))
+                            .padding(.trailing, 50)
+                    }
+                    Spacer()
                 }
             }
         }
@@ -58,17 +85,18 @@ struct StudyButton: View {
             RoundedRectangle(cornerRadius: 20.0)
                 .foregroundColor(.red)
                 .frame(height: 60)
-                .shadow(radius: 3.0, x: 3.0)
+                .shadow(radius: 3.0, x: 3.0, y: 3.0)
             HStack {
                 Text("Study")
                     .foregroundColor(.white)
                 Image(systemName: "deskclock.fill")
                     .foregroundColor(.white)
+                Spacer()
             }
-            .font(.custom("Futura", size: 32))
+            .padding()
+            .font(.custom("Futura", size: 24))
         }
-        .padding(.leading, 75)
-        .padding(.trailing, 75)
+        .frame(width: 180)
     }
 }
 
@@ -80,17 +108,18 @@ struct StatisticsButton: View {
             RoundedRectangle(cornerRadius: 20.0)
                 .foregroundColor(.red)
                 .frame(height: 60)
-                .shadow(radius: 3.0, x: 3.0)
+                .shadow(radius: 3.0, x: 3.0, y: 3.0)
             HStack {
                 Text("Statistics")
                     .foregroundColor(.white)
                 Image(systemName: "chart.bar.fill")
                     .foregroundColor(.white)
+                Spacer()
             }
-            .font(.custom("Futura", size: 32))
+            .padding()
+            .font(.custom("Futura", size: 24))
         }
-        .padding(.leading, 75)
-        .padding(.trailing, 75)
+        .frame(width: 180)
     }
 }
 
@@ -102,27 +131,28 @@ struct ProfileButton: View {
             RoundedRectangle(cornerRadius: 20.0)
                 .foregroundColor(.red)
                 .frame(height: 60)
-                .shadow(radius: 3.0, x: 3.0)
-            HStack {
+                .shadow(radius: 3.0, x: 3.0, y: 3.0)
+            HStack() {
                 Text("Profile")
                     .foregroundColor(.white)
                 Image(systemName: "person.crop.circle.fill")
                     .foregroundColor(.white)
+                Spacer()
             }
-            .font(.custom("Futura", size: 32))
+            .font(.custom("Futura", size: 24))
+            .padding()
         }
-        .padding(.leading, 75)
-        .padding(.trailing, 75)
+        .frame(width: 180)
     }
 }
 
 struct SettingsButton: View {
     
     var body: some View {
-        Image(systemName: "gearshape.fill")
+        Image("studypomsettings")
+            .resizable()
             .foregroundColor(.white)
-            .font(.custom("ChalkboardSE", size: 32))
-            .padding()
+            .frame(width: 75, height: 75)
     }
 }
 
