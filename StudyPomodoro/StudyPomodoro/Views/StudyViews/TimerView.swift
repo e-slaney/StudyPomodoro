@@ -65,6 +65,7 @@ struct TimerView: View {
                     } else {
                         Button {
                             startTimer()
+                            
                         } label: {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 15.0)
@@ -93,9 +94,10 @@ struct TimerView: View {
                         }
                     }
                     .padding([.leading, .trailing])
-
+                    
                 }
                 LineBreakView()
+                TaskListView()
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
         }
@@ -212,9 +214,6 @@ struct TimerArc: View {
     var body: some View {
         GeometryReader { geom in
             ZStack {
-                Circle()
-                    .frame(width: 300, height: 300)
-                    .opacity(0.25)
                 Path { path in
                     let center = CGPoint(x: geom.size.width / 2, y: geom.size.height / 2)
                     let radius = 150.0

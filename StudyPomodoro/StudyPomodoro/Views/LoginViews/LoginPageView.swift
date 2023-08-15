@@ -71,7 +71,7 @@ struct LoginPageView: View {
                     //Sign-in button
                     
                     Button {
-                        withAnimation(.easeIn(duration: 1.0)) {
+                        withAnimation(.easeIn(duration: 0.5)) {
                             loggedIn.toggle()
                         }
                     } label: {

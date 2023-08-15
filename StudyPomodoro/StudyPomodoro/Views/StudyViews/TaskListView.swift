@@ -21,20 +21,22 @@ struct TaskListView: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 20.0)
                                 .foregroundColor(.white)
-                                .frame(width: 90, height: 30)
+                                .frame(width: 130, height: 40)
                                 .shadow(radius: 3.0, x: 3.0)
                             Text("Add Task")
+                                .font(.custom("Futura", size: 22))
                                 .foregroundColor(Color(red: 1.0, green: 0.35, blue: 0.35))
                         }
                     }
                     Spacer()
-                }
-                ScrollView {
-                    ForEach(0..<taskList.count, id: \.self) { i in
-                        RoundedRectangle(cornerRadius: 5.0)
-                            .padding()
+                    ScrollView {
+                        ForEach(0..<taskList.count, id: \.self) { i in
+                            Text("\(taskList[i])")
+                                .font(.custom("Futura", size: 18))
+                        }
                     }
                 }
+                
             }
         }
         .padding(25)        

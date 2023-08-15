@@ -35,41 +35,79 @@ struct HomeView: View {
                     NavigationLink {
                         StudyView()
                     } label: {
-                        StudyButton()
-                            .padding(.leading)
+                        StudyButtonFadeView(startTime: 1.0)
+                            .padding(.leading, 25)
                     }
                     .padding(.bottom)
                     
                     NavigationLink {
                         EmptyView()
                     } label: {
-                        StatisticsButton()
-                            .padding(.leading)
+                        StatisticsButtonFadeView(startTime: 1.5)
+                            .padding(.leading, 25)
                     }
                     .padding(.bottom)
                     
                     NavigationLink {
                         EmptyView()
                     } label: {
-                        ProfileButton()
-                            .padding(.leading)
+                        ProfileButtonFadeView(startTime: 2.0)
+                            .padding(.leading, 25)
                     }
                     .padding(.bottom)
                     
                     Spacer()
-                    Text("\(quote.text)")
-                        .font(.custom("Avenir Next", size: 22))
-                        .multilineTextAlignment(.leading)
-                        .padding(.leading)
-                    HStack {
-                        Spacer()
-                        Text("\(quote.author)")
-                            .font(.custom("Avenir Next", size: 20))
-                            .padding(.trailing, 50)
-                    }
+                    
+                    FadingQuoteView(startTime: 2.5)
                     
                     Spacer()
                 }
+            }
+        }
+    }
+}
+
+struct FadingQuoteView: View {
+    
+    @State var opacity: CGFloat = 0
+    @State var baseTime: Double
+    
+    init(startTime: Double) {
+        self.baseTime = startTime
+    }
+    
+    var body: some View {
+        HStack(spacing: 0) {
+            QuoteView()
+            .buttonStyle(.borderedProminent)
+            .opacity(opacity)
+            .animation(.easeIn(duration: 1.0), value: opacity)
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + (0.8 + baseTime)) {
+                withAnimation {
+                    opacity = 1
+                }
+            }
+        }
+    }
+}
+
+struct QuoteView: View {
+    
+    @State var quote = getQuote()
+    
+    var body: some View {
+        VStack {
+            Text("\(quote.text)")
+                .font(.custom("Avenir Next", size: 22))
+                .multilineTextAlignment(.leading)
+                .padding(.leading)
+            HStack {
+                Spacer()
+                Text("\(quote.author)")
+                    .font(.custom("Avenir Next", size: 20))
+                    .padding(.trailing, 50)
             }
         }
     }
@@ -144,6 +182,102 @@ struct ProfileButton: View {
             .padding()
         }
         .frame(width: 190)
+    }
+}
+
+struct StudyButtonFadeView: View {
+    
+    @State var offsetXForBounce: CGFloat = 100.0
+    @State var opacity: CGFloat = 0
+    @State var baseTime: Double
+    @State var rot3D: Angle = Angle(degrees: 90)
+    
+    init(startTime: Double) {
+        self.baseTime = startTime
+    }
+    
+    var body: some View {
+        HStack(spacing: 0) {
+            StudyButton()
+            .buttonStyle(.borderedProminent)
+            .offset(x: offsetXForBounce, y: 0.0)
+            .opacity(opacity)
+            .animation(.linear(duration: 1.0), value: offsetXForBounce)
+            .rotation3DEffect(rot3D, axis: (x: 0.0, y: 1.0, z: 0.0))
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + (0.8 + baseTime)) {
+                withAnimation {
+                    offsetXForBounce = -10
+                    opacity = 1
+                    rot3D = Angle(degrees: 0)
+                }
+            }
+        }
+    }
+}
+
+struct StatisticsButtonFadeView: View {
+    
+    @State var offsetXForBounce: CGFloat = 100.0
+    @State var opacity: CGFloat = 0
+    @State var baseTime: Double
+    @State var rot3D: Angle = Angle(degrees: 90)
+    
+    init(startTime: Double) {
+        self.baseTime = startTime
+    }
+    
+    var body: some View {
+        HStack(spacing: 0) {
+            StatisticsButton()
+            .buttonStyle(.borderedProminent)
+            .offset(x: offsetXForBounce, y: 0.0)
+            .opacity(opacity)
+            .animation(.linear(duration: 1.0), value: offsetXForBounce)
+            .rotation3DEffect(rot3D, axis: (x: 0.0, y: 1.0, z: 0.0))
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + (0.8 + baseTime)) {
+                withAnimation {
+                    offsetXForBounce = -10
+                    opacity = 1
+                    rot3D = Angle(degrees: 0)
+                }
+            }
+        }
+    }
+}
+
+struct ProfileButtonFadeView: View {
+    
+    @State var offsetXForBounce: CGFloat = 100.0
+    @State var opacity: CGFloat = 0
+    @State var baseTime: Double
+    @State var rot3D: Angle = Angle(degrees: 90)
+    
+    init(startTime: Double) {
+        self.baseTime = startTime
+    }
+    
+    var body: some View {
+        HStack(spacing: 0) {
+            ProfileButton()
+            .buttonStyle(.borderedProminent)
+            .offset(x: offsetXForBounce, y: 0.0)
+            .opacity(opacity)
+            .animation(.linear(duration: 1.0), value: offsetXForBounce)
+            .rotation3DEffect(rot3D, axis: (x: 0.0, y: 1.0, z: 0.0))
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + (0.8 + baseTime)) {
+                withAnimation {
+                    offsetXForBounce = -10
+                    opacity = 1
+                    rot3D = Angle(degrees: 0)
+                }
+            }
+        }
     }
 }
 
